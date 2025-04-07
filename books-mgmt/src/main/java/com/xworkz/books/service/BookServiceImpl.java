@@ -24,5 +24,24 @@ public class BookServiceImpl implements BookService{
         return "Not Updated";
     }
 
+    @Override
+    public void getAllData() {
+        repo.readAll();
+    }
+
+    @Override
+    public String searchByPublishername(String publisher) {
+        if(publisher == null){
+            return "false";
+        }
+        repo.searchByPublishername(publisher);
+        return "Got the data";
+    }
+
+    @Override
+    public String deleteBooks(int id) {
+        return repo.deleteBooks(id);
+    }
+
 
 }
