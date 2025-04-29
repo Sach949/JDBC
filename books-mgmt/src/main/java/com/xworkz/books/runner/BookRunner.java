@@ -23,12 +23,8 @@ public class BookRunner {
         BookService service = new BookServiceImpl();
         //service.saveBook(book);
 
-//        String updateData = service.updateBook("Varshitha", "Varsha publications", "Kannada", 750, 2);
+        String updateData = service.updateBook("Varshitha", "Varsha publications", "Kannada", 750, 2);
        // System.out.println(service);
-       // System.out.println(updateData);
-        service.getAllData();
-        service.searchByPublishername("Varsha publications");
-        service.deleteBooks(3);
-        service.getAllData();
+        System.out.println(updateData);
     }
 }
